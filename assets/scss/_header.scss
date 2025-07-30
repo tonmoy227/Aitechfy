@@ -1,0 +1,120 @@
+.at-header-section {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	.navbar-nav {
+		flex-direction: row;
+	}
+	.at-mobile-menu-btn {
+		display: none;
+		@media #{$md,$sm,$xs,$xxs} {
+			display: block;
+		}
+		button {
+			padding: 0;
+			width: 30px;
+			height: 18px;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: transparent;
+			justify-content: space-between;
+			span {
+				width: 19px;
+				height: 2px;
+				display: block;
+				background-color: #fff;
+				&:nth-child(even) {
+					width: 29px;
+				}
+			}
+		}
+	}
+	&:is(.header_style_one) {
+		.at-header-content {
+			margin: 0 auto;
+			padding: 24px 15px;
+			max-width: 1830px;
+		}
+		.at-header-nav {
+			z-index: 1;
+			padding: 8px;
+			position: relative;
+			border-radius: 100px;
+			background-color: #fff;
+			@media #{$md,$sm,$xs,$xxs} {
+				display: none !important;
+			}
+			&:before,
+			&:after {
+				top: 0;
+				left: 0;
+				z-index: -1;
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				border-radius: 100px;
+			}
+			&:after {
+				background-color: #fff;
+			}
+			&:before {
+				top: 3px;
+				background: linear-gradient(90deg, #7512A2 0%, #FF31AB 48.53%, #FF6F05 100%);
+				background-size: 300% 100%;
+				animation: moveGradient 2s ease-in-out infinite alternate;
+			}
+		}
+		.main-navigation {
+			li {
+				margin: 0px 24px;
+				@media #{$xl,$lg} {
+					margin: 0px 15px;
+				}
+				a {
+					font-size: 16px;
+					color: var(--at-black);
+				}
+			}
+		}
+		.cta-btn {
+			a {
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+				background-color: var(--at-black1);
+			}
+		}
+		.at-top-social {
+			display: flex;
+			@media #{$lg,$md,$sm,$xs,$xxs} {
+				display: none !important;
+			}
+			a {
+				color: #fff;
+				opacity: .72;
+				font-size: 14px;
+				font-weight: 600;
+				border-radius: 50px;
+				padding: 10px 32px;
+				border: 1px solid #FFFFFF;
+				@media #{$xl} {
+					padding: 8px 15px;
+				}
+			}
+		}
+		.at-header-nav-social {
+			gap: 160px;
+			@media #{$xxl} {
+				gap: 60px;
+			}
+			@media #{$xl} {
+				gap: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,264 @@
+.at-hero2-about {
+	background-color: #07000E;
+}
+.at-about1-sec {
+	z-index: 2;
+	padding: 0px 60px;
+	position: relative;
+	@media #{$xxxl,$xxl,$xl,$lg,$md,$sm,$xs,$xxs} {
+		padding: 0px 15px;
+	}
+}
+.at-ab1-scroll {
+	left: 0;
+	right: 0;
+	top: -30px;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	position: absolute;
+	border-radius: 100%;
+	background: var(--at-prime-c2);
+	@media #{$sm,$xs,$xxs} {
+		display: none !important;
+	}
+}
+.at-about1-wrap {
+	overflow: hidden;
+	position: relative;
+	border-radius: 35px;
+	margin-top: -350px;
+	clip-path: polygon( 100% 96.975%,100% 96.975%,99.975% 97.466%,99.901% 97.931%,99.783% 98.365%,99.625% 98.762%,99.43% 99.114%,99.204% 99.416%,98.949% 99.662%,98.67% 99.846%,98.371% 99.96%,98.056% 100%,1.944% 100%,1.944% 100%,1.629% 99.96%,1.33% 99.846%,1.051% 99.662%,0.796% 99.416%,0.57% 99.114%,0.375% 98.762%,0.217% 98.365%,0.099% 97.931%,0.025% 97.466%,0% 96.975%,0% 3.025%,0% 3.025%,0.025% 2.534%,0.099% 2.069%,0.217% 1.635%,0.375% 1.239%,0.57% 0.886%,0.796% 0.584%,1.051% 0.338%,1.33% 0.154%,1.629% 0.04%,1.944% 0%,41.583% 0%,41.583% 0%,41.708% 0.006%,41.831% 0.025%,41.952% 0.055%,42.072% 0.097%,42.19% 0.151%,42.306% 0.217%,42.419% 0.293%,42.528% 0.381%,42.634% 0.48%,42.737% 0.589%,48.847% 7.591%,48.847% 7.591%,49.06% 7.803%,49.284% 7.968%,49.518% 8.086%,49.757% 8.157%,50% 8.181%,50.243% 8.157%,50.482% 8.086%,50.716% 7.968%,50.94% 7.803%,51.153% 7.591%,57.263% 0.589%,57.263% 0.589%,57.366% 0.48%,57.472% 0.381%,57.582% 0.293%,57.694% 0.217%,57.81% 0.151%,57.928% 0.097%,58.048% 0.055%,58.169% 0.025%,58.293% 0.006%,58.417% 0%,98.056% 0%,98.056% 0%,98.371% 0.04%,98.67% 0.154%,98.949% 0.338%,99.204% 0.584%,99.43% 0.886%,99.625% 1.238%,99.783% 1.635%,99.901% 2.069%,99.975% 2.534%,100% 3.025%,100% 96.975% );
+	@media #{$sm,$xs,$xxs} {
+		clip-path: none;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 100%;
+		position: absolute;
+		backdrop-filter: blur(100px);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(229, 197, 255, 0.24) 100%);
+	}
+	.at-ab1-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		position: absolute;
+	}
+	@media #{$md,$sm,$xs,$xxs} {
+		margin-top: 0;
+	}
+}
+.at-ab1-img {
+	top: 0px;
+	left: -125px;
+	max-width: 613px;
+	position: absolute;
+	clip-path: polygon( 62.202% 0.146%,5.041% 0.146%,5.041% 0.146%,4.249% 0.204%,3.499% 0.37%,2.799% 0.636%,2.16% 0.992%,1.591% 1.431%,1.104% 1.942%,0.707% 2.517%,0.411% 3.146%,0.226% 3.821%,0.163% 4.532%,0.163% 69.99%,0.163% 69.99%,0.226% 70.702%,0.411% 71.377%,0.707% 72.006%,1.104% 72.581%,1.591% 73.092%,2.16% 73.53%,2.799% 73.887%,3.499% 74.153%,4.249% 74.319%,5.041% 74.376%,27.342% 74.376%,27.342% 74.376%,28.133% 74.434%,28.883% 74.6%,29.583% 74.866%,30.223% 75.223%,30.791% 75.661%,31.279% 76.172%,31.675% 76.747%,31.971% 77.376%,32.156% 78.051%,32.22% 78.762%,32.22% 95.468%,32.22% 95.468%,32.284% 96.179%,32.468% 96.854%,32.764% 97.483%,33.161% 98.058%,33.648% 98.569%,34.217% 99.008%,34.856% 99.364%,35.556% 99.63%,36.307% 99.796%,37.098% 99.854%,94.959% 99.854%,94.959% 99.854%,95.751% 99.796%,96.501% 99.63%,97.201% 99.364%,97.84% 99.008%,98.409% 98.569%,98.896% 98.058%,99.293% 97.483%,99.589% 96.854%,99.774% 96.179%,99.837% 95.468%,99.837% 41.647%,99.837% 41.647%,99.774% 40.936%,99.589% 40.261%,99.293% 39.632%,98.896% 39.057%,98.409% 38.546%,97.84% 38.108%,97.201% 37.751%,96.501% 37.485%,95.751% 37.319%,94.959% 37.261%,71.958% 37.261%,71.958% 37.261%,71.166% 37.204%,70.416% 37.038%,69.716% 36.772%,69.077% 36.415%,68.508% 35.977%,68.021% 35.466%,67.624% 34.891%,67.328% 34.262%,67.144% 33.587%,67.08% 32.875%,67.08% 4.532%,67.08% 4.532%,67.016% 3.821%,66.831% 3.146%,66.535% 2.517%,66.138% 1.942%,65.651% 1.431%,65.083% 0.992%,64.443% 0.636%,63.743% 0.37%,62.993% 0.204%,62.202% 0.146% );
+	@media #{$xl} {
+		left: -290px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		display: none;
+	}
+}
+.at-about1-text-area {
+	max-width: 965px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.at-sec-title1 {
+		.sec_title {
+			color: #fff;
+		}
+	}
+}
+.at-ab-exp-wrap {
+	margin-left: 158px;
+	border-top: 1px solid rgba(255, 255, 255, 0.32);
+	.at-btn2 {
+		margin-left: 28px;
+	}
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		margin-left: 0;
+	}
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
+}
+.at-ab-exp-btn {
+	padding: 25px 35px 25px 25px;
+	border-right: 1px solid rgba(255, 255, 255, 0.32);
+	@media #{$sm,$xs,$xxs} {
+		padding-left: 0;
+		padding-bottom: 0;
+		border-right: none;
+	}
+}
+.at-ab-exp {
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 38px;
+	h3 {
+		position: relative; 
+
+		span {
+			font-size: 232px;
+			font-weight: 600;
+			line-height: 1;
+			background-image: url(../img/about/ac1.jpg);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-position: 30% 50%;
+
+		}
+		&:before {
+			top: 8px;
+			left: 8px;
+			z-index: -1;
+			color: #121C23;
+			line-height: 1;
+			font-size: 232px;
+			font-weight: 600;
+			position: absolute;
+			content: attr(data-text);
+
+		}
+	}
+	p {
+		margin: 0;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 300;
+		max-height: 130px;
+		margin-bottom: 30px;
+		writing-mode: sideways-lr;
+
+	}
+}
+.at-ab-exp-text-img {
+	padding-top: 45px;
+	padding-left: 70px;
+	@media #{$sm,$xs,$xxs} {
+		padding-left: 0;
+	}
+	p {
+		color: #fff;
+		padding-bottom: 55px;
+		@media #{$sm,$xs,$xxs} {
+			padding-bottom: 30px;
+		}
+	}
+	.item-img {
+		overflow: hidden;
+		border-radius: 10px;
+
+	}
+}
+
+.at-ab1-count-item {
+	max-width: 294px;
+	margin-bottom: 30px;
+	.item-count {
+		height: 72px;
+		overflow: hidden;
+		padding-left: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, .32);
+		h3 {
+			color: #fff;
+			line-height: 1;
+			font-weight: 700;
+			font-size: 92px;
+			sub {
+				bottom: 15px;
+				color: #A234FD;
+				font-size: 60px;
+				font-weight: 300;
+				@media #{$xs,$xxs} {
+					bottom: 0;
+					font-size: 40px;
+				}
+			}
+			@media #{$sm} {
+				font-size: 70px;
+			}
+			@media #{$xs} {
+				font-size: 60px;
+			}
+			@media #{$xxs} {
+				font-size: 50px;
+			}
+		}
+	}
+	p {
+		color: #fff;
+		opacity: .8;
+		padding-top: 20px;
+	}
+}
+.at-spon1-title {
+	gap: 20px;
+	margin: 0 auto;
+	max-width: 1800px;
+	i {
+		height: 1px;
+		width: 50%;
+		background: linear-gradient(90deg, #07000E 0%, #FFFFFF 100%);
+		&:last-child {
+			background: linear-gradient(90deg, #FFFFFF 0%, #07000E 100%);
+		}
+	}
+	span {
+		color: #fff;
+		font-size: 20px;
+		font-weight: 500;
+		white-space: nowrap;
+		@media #{$md,$sm,$xs,$xxs} {
+			white-space: wrap;
+			text-align: center;
+		}
+	}
+}
+.at-spon1-slider {
+	margin: 0 auto;
+	margin-top: 60px;
+	max-width: 1800px;
+}
+.at-spon1-item {
+	height: 36px;
+	overflow: hidden;
+	position: relative;
+	.item-img {
+		display: flex;
+		cursor: pointer;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		.img__1 {
+			filter: grayscale(1);
+			transition: 500ms cubic-bezier(0.5, -0.75, 0.3, 1.5);
+		}
+		.img__2 {
+			top: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			position: absolute;
+			transform: translateY(150%);
+			transition: 500ms cubic-bezier(0.5, -0.75, 0.3, 1.5);
+		}
+		&:hover {
+			.img__1 {
+				transform: translateY(-150%);
+			}
+			.img__2 {
+				transform: translateY(0%);
+			}
+		}
+	}
+}
