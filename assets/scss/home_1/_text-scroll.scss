@@ -1,0 +1,60 @@
+.at-text-scrol-sec {
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding-bottom: 0;
+	}
+}
+.at-text-scrol1-bg {
+	top: 53px;
+	z-index: 1;
+	width: 115%;
+	left: -25px;
+	transform: rotate(2deg);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		top: 0;
+		transform: rotate(0deg);
+	}
+	.at-txt-bg {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			opacity: .51;
+			position: absolute;
+			background-color: #07000E;
+		}
+	}
+}
+.at-text-scrol1 {
+	padding: 34px 0px 32px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		padding: 25px 0px;
+	}
+	h2 {
+		color: #fff;
+		font-size: 40px;
+		font-weight: 600;
+		display: inline-block;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			font-size: 30px;
+		}
+	}
+}
+.at-text-scrol2-bg {
+	top: -5px;
+	z-index: 2;
+	left: -25px;
+	width: 115%;
+	transform: rotate(-2deg);
+	background: linear-gradient(180deg, #F8B6BC 0%, #771A99 0.01%, #89309E 40%, #BD6FFD 100%);
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		top: 0;
+		transform: rotate(0deg);
+	}
+}

@@ -76,6 +76,10 @@ body::-webkit-scrollbar-thumb {
 		transform: rotateY(360deg);
 	}
 }
+.marquee-left,
+.marquee-right {
+	display: flow-root;
+}
 #preloader { 
 	position: fixed; 
 	left: 0;
@@ -213,6 +217,7 @@ a {
 	list-style: none;
 	padding: 0;
 	z-index: 1;
+	display: flex;
 }
 .tx-tab-btn {
 	.nav-tabs .nav-item.show .nav-link,
