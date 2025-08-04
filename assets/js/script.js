@@ -316,4 +316,57 @@ Last change:    00/00/00
 		.to( ".at_step_type_3" , { rotate: "6deg",  y: -620,   duration: 1, ease: "power2.out"},"<=.6")
 		.to( ".at_step_type_4" , { rotate: "0",  y: -610,   duration: 1, ease: "power2.out"},"<=.6")
 	};
+
+	if ($('.at-testi2-slider').length > 0 ) {
+		var slider = new Swiper('.at-testi2-slider', {
+			spaceBetween: 32,
+			slidesPerView: 4,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 1000,
+			pagination: {
+				el: ".at-testi2-pagi",
+				clickable: true,
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 4,
+				},
+				'1300': {
+					slidesPerView: 3,
+				},
+				'1200': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'992': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'992': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'768': {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				'576': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'480': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+				'0': {
+					slidesPerView: 1,
+					spaceBetween: 24,
+				},
+			},
+		});
+	};
 })(jQuery);
