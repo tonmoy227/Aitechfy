@@ -1,9 +1,16 @@
 .at-ftr-social2 {
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
 	h3 {
 		color: #fff;
 		max-width: 610px;
 		font-size: 52px;
 		font-weight: 600;
+		@media #{$xs,$xxs} {
+			font-size: 40px;
+		}
 		span {
 			opacity: .5;
 			display: block;
@@ -12,6 +19,9 @@
 }
 .at-ftr-social2-icon {
 	gap: 12px;
+	@media #{$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	a {
 		position: relative;
 		i {
@@ -23,6 +33,10 @@
 			align-items: center;
 			justify-content: center;
 			transition: 800ms cubic-bezier(0.5, -0.75, 0.3, 1.5);
+			@media #{$xxs} {
+				width: 45px;
+				height: 45px; 
+			}
 		}
 		span {
 			opacity: 0;
@@ -72,6 +86,12 @@
 .at-footer2-widget-wrap {
 	border-top: 1px solid rgba(255, 255, 255, .24);
 }
+.at-ftr2-content {
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
 .at-ftr2-widget {
 	.cta-widget {
 		max-width: 310px;
@@ -85,6 +105,9 @@
 			font-weight: 500;
 			margin-bottom: 0;
 			padding: 20px 0px;
+			@media #{$xxs} {
+				font-size: 30px;
+			}
 		}
 		p {
 			color: #fff;
@@ -121,6 +144,46 @@
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+.at-ftr2-menu-wrap {
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+}
+.at-ftr2-menu {
+	li {
+		margin-left: 36px;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			margin-left: 15px;
+		}
+		a {
+			color: #fff;
+		}
+	}
+}
+.at-ftr2-copyright {
+	font-size: 16px;
+	margin-top: 24px;
+	padding-top: 24px;
+	padding-bottom: 28px;
+	border-top: 1px solid rgba(255, 255, 255, .24);
+	@media #{$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+	p {
+		opacity: .72;
+		color: #fff;
+	}
+	ul {
+		li {
+			a {
+				color: #fff;
+				opacity: .72;
+			}
 		}
 	}
 }

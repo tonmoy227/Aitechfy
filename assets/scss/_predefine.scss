@@ -279,17 +279,113 @@ a {
 		color: #fff;
 		display: flex;
 		font-size: 17px;
+		overflow: hidden;
 		font-weight: 600;
 		padding: 15px 28px;
+		position: relative;
 		align-items: center;
 		border-radius: 100px;
 		font-family: var(--at-outfit);
 		background: var(--at-prime-c1);
+		i {
+			z-index: 8;
+			position: relative;
+		}
+		.front_view {
+			z-index: 5;
+			transition-delay: .2s;
+		}
+		.back_view {
+			display: flex;
+			position: absolute;
+			color: #fff;
+			top: 0;
+			left: -10px;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			transform: translateY(100%) rotate(25deg);
+			opacity: 0;
+			transition-delay: 0s;
+			z-index: 6;
+			transition: transform .8s cubic-bezier(.19,1,.22,1),opacity .4s cubic-bezier(.19,1,.22,1);
+		}
+		.btn__ripple {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: bottom;
+			background: var(--at-prime-c1);
+			z-index: 3;
+			transform: scaleY(0);
+			transition: transform .8s cubic-bezier(.19,1,.22,1);
+			transition-delay: 0s;	
+		}
+		.btn_overlay {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			&:before,
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transform: scaleY(0);
+				transition: transform .8s cubic-bezier(.19,1,.22,1);
+				transform-origin: bottom;
+			}
+			&:before {
+				z-index: 3;
+				transition-delay: .07s;
+				background-color: var(--at-c1);
+			}
+			&:after {
+				background-color: var(--at-c2);
+				z-index: 2;
+				transition-delay: .15s;
+			}
+		}
 		@media #{$xxs} {
 			padding: 10px 24px;
 		}
 		span {
 			white-space: nowrap;
+		}
+		&:hover {
+			.back_view {
+				transform: translateY(0) rotate(0);
+				opacity: 1;
+				transition-delay: .2s; 
+			}
+			.front_view {
+				transform: translateY(-100%) rotate(-25deg);
+				opacity: 0;
+				transition-delay: 0s;
+
+			}
+			.btn_overlay {
+				&:before,
+				&:after {
+					transform: scaleY(1);
+					transition-delay: .07s;
+				}
+				&:after {
+					transition-delay: 0s;
+				}
+			}
+			.btn__ripple {
+				transform: scaleY(1);
+				transition-delay: .15s;
+			}
 		}
 	}
 }

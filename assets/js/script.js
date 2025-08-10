@@ -85,7 +85,11 @@ Last change:    00/00/00
 		$(this).css('background-image', 'url('+ $(this).attr('data-background') + ')');
 	});
 	gsap.registerPlugin(ScrollTrigger);
-	
+	// counter-activation
+	$('.counter').counterUp({
+		delay: 20,
+		time: 5000
+	});
 	// Animation
 	if($('.wow').length){
 		var wow = new WOW(
@@ -129,7 +133,27 @@ Last change:    00/00/00
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
 
-
+			gsap.utils.toArray(".at-text p").forEach(paragraph => {
+				let timeline = gsap.timeline({
+					scrollTrigger: {
+						trigger: paragraph,
+						start: "top 90%",
+						end: "bottom 60%",
+						toggleActions: "play none none none"
+					}
+				});
+				let splitText = new SplitText(paragraph, { type: "lines" });
+				gsap.set(paragraph, { perspective: 400 });
+				timeline.from(splitText.lines, {
+					opacity: 0,
+					rotationX: -80,
+					transformOrigin: "top center -50",
+					force3D: true,
+					duration: 1,
+					delay: 0.5,
+					stagger: 0.1
+				});
+			});
 			let preloader = document.querySelector("#preloader");
 			if (preloader) {
 				preloader.classList.add("preloaded");
@@ -138,7 +162,54 @@ Last change:    00/00/00
 				}, 1000 ) ;
 
 			}
+			if($(".at_hero_title").length) {
+				var NXSECTITLE = $(".at_hero_title");
+				if(NXSECTITLE.length == 0) return; gsap.registerPlugin(SplitText); NXSECTITLE.each(function(index, el) {
+
+					el.split = new SplitText(el, { 
+						type: "lines,words,chars",
+						linesClass: "split-line"
+					});
+
+					gsap.set(el, { perspective: 400 });
+
+					if( $(el).hasClass('hero_title_1') ){
+						gsap.set(el.split.chars, {
+							y: 100,
+							opacity: 0,
+							scaleX: 0,
+							rotationX: 15,
+						});
+					}
+					el.anim = gsap.to(el.split.chars, {
+						scrollTrigger: {
+							trigger: el,
+							start: "top 90%",
+							toggleActions: "play reverse play reverse",
+							markers: false,
+						},
+						x: 0,
+						y: 0,
+						scaleX: 1,
+						scaleY: 1,
+						opacity: 1,
+						duration: 1,
+						stagger: .05,
+						rotationX: 0,
+						delay: .1,
+						ease: "power3.inOut",
+					});
+				});
+			}
 			setTimeout(function() {
+				const AIHERO1 = gsap.timeline();
+				AIHERO1
+				.from(".at-hero2-img-wrap .item-img3", { opacity:0, rotate: 0,  yPercent: 100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" })
+				.from(".at-hero2-img-wrap .item-img2", { opacity:0, rotate: 0,  xPercent: -100, duration: 4, transformOrigin: "center", ease: "elastic.out(1,0.7)" },"< .5")
+				.from(".at-hero2-img-wrap .item-img1", { opacity:0, rotate: 0,  xPercent: 100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"<")
+				.from(".at-hero2-client-wrap .at-hr2-cl-shape", { opacity:0, rotate: 180,  yPercent: -100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"<")
+				.from(".at-hero2-client li", { opacity:0, scale: 0, rotate: 360,  yPercent: -100, duration: 3.5, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"< .5")
+				.from(".at-hero2-text .at-btn2", { opacity:0,   yPercent: 100, duration: 1, transformOrigin: "bottom",  ease: "power1.out" },"< .5")
 				
 			}, 700);
 		})		

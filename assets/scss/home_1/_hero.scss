@@ -7,6 +7,23 @@
 		padding-bottom: 80px;
 	}
 }
+@keyframes leftRight {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-40px); 
+	}
+	50% {
+		transform: translateX(60px); 
+	}
+	75% {
+		transform: translateX(40px); 
+	}
+	100% {
+		transform: translateX(0); 
+	}
+}
 .at-hero2-bg {
 	top: 0;
 	left: 0;
@@ -15,6 +32,12 @@
 	height: 100%;
 	max-height: 920px;
 	position: absolute;
+	.item-img {
+		img {
+			scale: 1.05;
+			animation: leftRight 15s infinite ease-in-out;
+		}
+	}
 	&:before {
 		left: 0;
 		bottom: 0;
