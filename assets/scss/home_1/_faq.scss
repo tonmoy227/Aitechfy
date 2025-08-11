@@ -1,3 +1,7 @@
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
 .at-faq1-sec {
 	z-index: 1;
 	.at-sec-title1 {
@@ -13,6 +17,7 @@
 		right: -12%;
 		bottom: -20%;
 		z-index: -2;
+		animation: 10s spin linear infinite;
 		@media #{$md,$sm,$xs,$xxs} {
 			display: none;
 		}

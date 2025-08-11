@@ -223,11 +223,18 @@
 	margin: 0 auto;
 	max-width: 1800px;
 	i {
+		width: 0%;
 		height: 1px;
-		width: 50%;
+		transition: all 2500ms ease-in-out;
 		background: linear-gradient(90deg, #07000E 0%, #FFFFFF 100%);
 		&:last-child {
 			background: linear-gradient(90deg, #FFFFFF 0%, #07000E 100%);
+		}
+	}
+	&.active {
+		i {
+			width: 50%;
+			transition-delay: 500ms;
 		}
 	}
 	span {

@@ -422,6 +422,9 @@ a {
 		font-size: 52px;
 		font-weight: 600;
 		line-height: 1.08;
+		.split-line {
+			padding-bottom: 3px;
+		}
 		@media #{$sm} {
 			font-size: 48px;
 		}

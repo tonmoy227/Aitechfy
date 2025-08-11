@@ -84,13 +84,19 @@
 	}
 	.item-icon {
 		margin: 40px 0px;
+		perspective: 1000px;
+		transform-style: preserve-3d;
+		animation: spin3d 10s linear infinite;
 	}
 	.at-btn2 {
 		display: block;
 		text-align: center;
 		a {
 			justify-content: center;
-			background: var(--at-prime-c2);			
+			background: var(--at-prime-c2);	
+			&:hover {
+				letter-spacing: 1px;
+			}		
 		}
 	}
 }

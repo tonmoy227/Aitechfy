@@ -52,6 +52,7 @@
 		}
 		img {
 			mix-blend-mode: luminosity;
+			transition: all 500ms ease-in-out;
 		}
 	}
 	&:nth-child(even) {
@@ -114,6 +115,13 @@
 		} 
 		span {
 			color: #9D4C10;
+		}
+	}
+	&:hover {
+		.item-img {
+			img {
+				transform: scale(1.1);
+			}
 		}
 	}
 }

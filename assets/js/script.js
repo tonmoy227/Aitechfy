@@ -214,7 +214,93 @@ Last change:    00/00/00
 			}, 700);
 		})		
 	});
-	
+	if($('.ai-itm-title').length) {
+		var txtheading = $(".ai-itm-title");
+
+		if(txtheading.length == 0) return; gsap.registerPlugin(SplitText); txtheading.each(function(index, el) {
+
+			el.split = new SplitText(el, { 
+				type: "lines,words,chars",
+				linesClass: "split-line"
+			});
+
+			if( $(el).hasClass('ai-itm-anim') ){
+				gsap.set(el.split.chars, {
+					opacity: .3,
+					x: "-10",
+				});
+			}
+			el.anim = gsap.to(el.split.chars, {
+				scrollTrigger: {
+					trigger: el,
+					start: "top 92%",
+					end: "top 50%",
+					markers: false,
+					scrub: 1,
+				},
+
+				x: "0",
+				y: "0",
+				opacity: 1,
+				duration: .7,
+				stagger: 0.2,
+			});
+
+		});
+	}
+
+	gsap.utils.toArray(".img-parallax").forEach(function(container) {
+		let image = container.querySelector("img");
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: container,
+				scrub: true,
+				pin: false,
+			},
+		}); 
+		tl.from(image, {
+			yPercent: -30,
+			ease: "none",
+		}).to(image, {
+			yPercent: 30,
+			ease: "none",
+		}); 
+	});
+
+	const boxes = gsap.utils.toArray('.txt_item_active');
+	boxes.forEach(svg => {
+		gsap.to(svg, {
+			scrollTrigger: {
+				trigger: svg,
+				start: "top 100%",
+				end: "bottom bottom",
+				toggleClass: "active",
+				duration: 3,
+				delay:1,
+				toggleActions: "play play play reverse",
+				once: true,
+			}
+		});
+	});
+
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 95%",
+				end: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, yPercent: "-100"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
+
 
 	if ($('.at-spon1-slider').length > 0 ) {
 		var slider = new Swiper('.at-spon1-slider', {
@@ -382,11 +468,15 @@ Last change:    00/00/00
 
 		});
 		ATWORKPROCESS
+		.from( ".at-step1-side2" , {   xPercent: -100,   duration: 1, ease: "power2.out"})
+		.from( ".at-step1-side1" , {   xPercent: 100,   duration: 1, ease: "power2.out"})
+		.to( ".at_step_type_1" , { rotate: "18deg",  y: -120,   duration: 1, ease: "power2.out"},"<")
 		.to( ".at_step_type_1" , { rotate: "18deg",  y: -120,   duration: 1, ease: "power2.out"})
 		.to( ".at_step_type_2" , { rotate: "-18deg",  y: -640,   duration: 1, ease: "power2.out"},"<=.15")
 		.to( ".at_step_type_3" , { rotate: "6deg",  y: -620,   duration: 1, ease: "power2.out"},"<=.6")
 		.to( ".at_step_type_4" , { rotate: "0",  y: -610,   duration: 1, ease: "power2.out"},"<=.6")
 	};
+
 
 	if ($('.at-testi2-slider').length > 0 ) {
 		var slider = new Swiper('.at-testi2-slider', {

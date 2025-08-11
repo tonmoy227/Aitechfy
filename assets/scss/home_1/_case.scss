@@ -1,7 +1,28 @@
 .at-case-sec {
+	z-index: 1;
 	.at-sec-title1 {
 		margin: 0 auto;
 		max-width: 860px;
+	}
+	.at-case-shape1 {
+		top: -15%;
+		left: -25%;
+		z-index: -1;
+	}
+	.at-case-shape2 {
+		top: -15%;
+		right: -20%;
+		z-index: -1;
+	}
+	.at-case-shape3 {
+		bottom: -15%;
+		left: -5%;
+		z-index: -1;
+	}
+	.at-case-shape4 {
+		bottom: -15%;
+		right: -20%;
+		z-index: -1;
 	}
 }
 .at-case-item {

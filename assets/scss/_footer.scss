@@ -105,8 +105,12 @@
 			font-weight: 500;
 			margin-bottom: 0;
 			padding: 20px 0px;
+			transition: all 500ms ease-in-out;
 			@media #{$xxs} {
 				font-size: 30px;
+			}
+			&:hover {
+				color: var(--at-c3);
 			}
 		}
 		p {
@@ -144,7 +148,16 @@
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+			transition: all 500ms ease-in-out;
+			&:hover {
+				transform: scale(1.2);
+			}
 		}
+	}
+	.logo-widget {
+		perspective: 1000px;
+		transform-style: preserve-3d;
+		animation: spin3d 10s linear infinite;
 	}
 }
 .at-ftr2-menu-wrap {
@@ -161,6 +174,9 @@
 		}
 		a {
 			color: #fff;
+			&:hover {
+				color: var(--at-c4);
+			}
 		}
 	}
 }
@@ -183,6 +199,9 @@
 			a {
 				color: #fff;
 				opacity: .72;
+				&:hover {
+					color: var(--at-c4);
+				}
 			}
 		}
 	}
