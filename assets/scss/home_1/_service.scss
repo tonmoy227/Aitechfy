@@ -158,6 +158,9 @@
 }
 .at-ser1-content {
 	gap: 48px;
+	margin: 0 auto;
+	max-width: 1920px;
+	margin-top: 60px;
 	@media #{$lg,$md,$sm,$xs,$xxs} {
 		display: block !important;
 	}

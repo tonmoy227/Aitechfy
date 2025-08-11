@@ -11,6 +11,12 @@
 		}
 	}
 }
+.at-step1-wrap {
+	height: 100vh;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		height: auto;
+	}
+}
 .at-step1-side1 {
 	right: 0;
 	bottom: 0;

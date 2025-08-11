@@ -390,25 +390,28 @@ Last change:    00/00/00
 		},
 	});
 
-	if (window.matchMedia("(min-width: 1200px)").matches) { 
-		var ATTEAM = gsap.timeline({
-			scrollTrigger: {
-				trigger: '.at-tm1-sec',
-				start: "top 0%",
-				end: "top -100%",
-				scrub: 1,
-				pin: true,
-				pinSpacing: true,
-				markers: false,
-			}
+	ScrollTrigger.matchMedia({
+		"(min-width: 1200px) and (max-width: 1920px)": function() {
 
-		});
-		ATTEAM
-		.from( ".at-tm1-content .at-tm1-bgclr" , { width: 0,  duration: 1, ease: "power2.out"})
-		.from( ".at-tm1-item-wrap" , { yPercent: 100, duration: 1, ease: "power2.out"},"<= .1")
-		.from( ".at-tm1-item:nth-child(1)" , { yPercent: 100, duration: 1, ease: "power2.out"},"<= .4")
-		.from( ".at-tm1-item:nth-child(4)" , { yPercent: 100, duration: 1, ease: "power2.out"},"<")
-	};
+			var ATTEAM = gsap.timeline({
+				scrollTrigger: {
+					trigger: '.at-tm1-sec',
+					start: "top 0%",
+					end: "top -100%",
+					scrub: 1,
+					pin: true,
+					pinSpacing: true,
+					markers: false,
+				}
+			});
+
+			ATTEAM
+			.from(".at-tm1-content .at-tm1-bgclr", { width: 0, duration: 1, ease: "power2.out" })
+			.from(".at-tm1-item-wrap", { yPercent: 100, duration: 1, ease: "power2.out" },"<= .1")
+			.from(".at-tm1-item:nth-child(1)", { yPercent: 100, duration: 1, ease: "power2.out" }, "<= .4")
+			.from(".at-tm1-item:nth-child(4)", { yPercent: 100, duration: 1, ease: "power2.out" }, "<");
+		}
+	});
 
 	if (window.matchMedia("(min-width: 1200px)").matches) { 
 		var ATTEAM = gsap.timeline({
@@ -477,7 +480,22 @@ Last change:    00/00/00
 		.to( ".at_step_type_4" , { rotate: "0",  y: -610,   duration: 1, ease: "power2.out"},"<=.6")
 	};
 
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 95%",
+				end: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
 
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, y: "200"}, {opacity: 1, y: 0, duration: 1, immediateRender: false})
+	});
 	if ($('.at-testi2-slider').length > 0 ) {
 		var slider = new Swiper('.at-testi2-slider', {
 			spaceBetween: 32,
