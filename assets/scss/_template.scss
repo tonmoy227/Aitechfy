@@ -2,22 +2,28 @@
 Font load
 ===========*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 :root {
 	--at-body-c3: #5F5D61;
 	--at-black1: #07000E;
 	--at-outfit: "Outfit", sans-serif;
 	--at-dm: "DM Sans", sans-serif;
+	--at-sora: "Sora", sans-serif;
 	--at-c1:  #FF6F05;
 	--at-c2: #FF31AB;
 	--at-c3: #7512A2;
 	--at-c4: #6C1AFC;
 	--at-c5: #EC736C;
+	--at-c6: #EC04FB;
+	--at-c7: #5259EB;
 	--at-prime-c1: linear-gradient(90deg, var(--at-c1) 0%, var(--at-c2) 51.47%, var(--at-c3) 100%);
 	--at-prime-c2: linear-gradient(90deg, var(--at-c4) 0%, var(--at-c5) 100%);
+	--at-prime-c3: linear-gradient(90deg, var(--at-c6) 0%, var(--at-c7) 100%);
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 @keyframes moveGradient {
 	0% {
 		background-position: 0% 0%;
@@ -32,7 +38,12 @@ Font load
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
+%gradient-text2 {
+	background: var(--at-prime-c3);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 // Responsive Variables
 $over:'(min-width: 1800px)';
 $xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';

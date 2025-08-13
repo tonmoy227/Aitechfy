@@ -548,4 +548,58 @@ Last change:    00/00/00
 			},
 		});
 	};
+
+
+// Project Slider	
+	if ($('.at-ser3-slider').length > 0 ) {
+		var slider = new Swiper('.at-ser3-slider', {
+			slidesPerView: 5,
+			loop: true,
+			spaceBetween: 32,
+			centeredSlides: true,
+			speed: 1000,
+			navigation: {
+				nextEl: ".at-ser3-next",
+				prevEl: ".at-ser3-prev",
+			},
+			pagination: {
+				el: ".at-ser3-pagi",
+				clickable: true,
+			},
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 4,
+				},
+				'992': {
+					slidesPerView: 3,
+				},
+				'991': {
+					slidesPerView: 3,
+					centeredSlides: false,
+				},
+				'768': {
+					slidesPerView: 3,
+					centeredSlides: false,
+				},
+				'576': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+				'0': {
+					slidesPerView: 1,
+					centeredSlides: false,
+				},
+			},
+		});
+	};
+
+
+
 })(jQuery);
