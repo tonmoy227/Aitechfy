@@ -600,6 +600,65 @@ Last change:    00/00/00
 		});
 	};
 
+// Price Switch
+	var e = document.getElementById("filt-monthly"),
+	d = document.getElementById("filt-hourly"),
+	t = document.getElementById("switcher"),
+	m = document.getElementById("monthly"),
+	y = document.getElementById("hourly");
+	function activateMonthly() {
+		t.checked = false;
+		e.classList.add("toggler--is-active");
+		d.classList.remove("toggler--is-active");
+		m.classList.remove("hide");
+		y.classList.add("hide");
+	}
+	function activateHourly() {
+		t.checked = true;
+		d.classList.add("toggler--is-active");
+		e.classList.remove("toggler--is-active");
+		m.classList.add("hide");
+		y.classList.remove("hide");
+	}
+	e.addEventListener("click", activateMonthly);
+	d.addEventListener("click", activateHourly);
+	t.addEventListener("click", function () {
+		if (t.checked) {
+			activateHourly();
+		} else {
+			activateMonthly();
+		}
+	});
+
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const counters = document.querySelectorAll('.counter1');
+		counters.forEach(counter => {
+			const target = +counter.getAttribute('data-target');
+			const offset = 150;
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						window.addEventListener("scroll", onScroll);
+					} else {
+						window.removeEventListener("scroll", onScroll);
+					}
+				});
+			}, { threshold: 0 });
+			observer.observe(counter);
+			function onScroll() {
+				const rect = counter.getBoundingClientRect();
+				const windowHeight = window.innerHeight;
+				const visible = Math.min(
+					Math.max((windowHeight - rect.top + offset) / (windowHeight + rect.height), 0),
+					1
+					);
+				const value = Math.floor(visible * target);
+				counter.innerText = value;
+			}
+		});
+	});
 
 
 })(jQuery);
