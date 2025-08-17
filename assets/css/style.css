@@ -434,7 +434,8 @@ Font load
   border-radius: 16px;
   position: absolute;
   background: rgba(255, 255, 255, 0.3215686275);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 .at-header-section:is(.header_style_three) .ra-header-content:before {
   width: 97%;
@@ -2902,7 +2903,8 @@ a:hover, a:focus {
 }
 .at-hero2-img-wrap .hr2-img {
   border-radius: 16px;
-  backdrop-filter: blur(72px);
+  -webkit-backdrop-filter: blur(72px);
+          backdrop-filter: blur(72px);
   border: 6px solid rgba(255, 255, 255, 0.1215686275);
   -webkit-box-shadow: -22px -22px 40px 0px rgba(0, 0, 0, 0.5215686275);
           box-shadow: -22px -22px 40px 0px rgba(0, 0, 0, 0.5215686275);
@@ -3033,7 +3035,8 @@ a:hover, a:focus {
   content: "";
   height: 100%;
   position: absolute;
-  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.24)), to(rgba(229, 197, 255, 0.24)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(229, 197, 255, 0.24) 100%);
 }
@@ -3886,7 +3889,8 @@ a:hover, a:focus {
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+          backdrop-filter: blur(13px);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
@@ -4619,7 +4623,8 @@ a:hover, a:focus {
   overflow: hidden;
   border-radius: 12px;
   background-color: #fff;
-  backdrop-filter: blur(180px);
+  -webkit-backdrop-filter: blur(180px);
+          backdrop-filter: blur(180px);
 }
 .at-testi2-item .item-text .item-rate li {
   color: #FCA62F;
@@ -4799,7 +4804,8 @@ a:hover, a:focus {
   padding: 4px 14px;
   border-radius: 4px;
   background-color: #EBD3FF;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 .at-blog2-item .item-text .blg_title {
   font-size: 24px;
