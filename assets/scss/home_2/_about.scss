@@ -1,8 +1,8 @@
 .at-about3-sec {
 	z-index: 1;
 	.at-about3-shape {
-		top: 0;
 		right: 0;
+		top: 50px;
 		z-index: -1;
 		opacity: 12%;
 	}
@@ -85,30 +85,37 @@
 		.item-img {
 			width: 343px;
 			height: 318px;
+			transform: translateX(-50px);
 		}
 	}
 	&:nth-child(2) {
+		.inner-item-wrap {
+			z-index: 2;
+		}
 		.item-img {
 			width: 340px;
 			height: 148px;
+			transform: translateX(-35px);
 		}
 	}
 	&:nth-child(3) {
 		.item-img {
-			width: 341px;
-			height: 172px;
+			width: 172px;
+			height: 341px;
 		}
 	}
 	&:nth-child(4) {
 		.item-img {
 			width: 252px;
 			height: 124px;
+			transform: translateX(-50px);
 		}
 	}
 	&:nth-child(5) {
 		.item-img {
 			width: 301px;
 			height: 224px;
+			transform: translateX(-20px);
 		}
 	}
 	.inner-item-wrap {

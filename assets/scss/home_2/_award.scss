@@ -1,0 +1,124 @@
+.at-award3-sec {
+	.at-award3-shape1 {
+		top: -45%;
+		right: -40%;
+	}
+	.at-award3-shape2 {
+		top: -45%;
+		left: -37%;
+	}
+}
+.at-award3-content {
+	overflow: hidden;
+	background-color: #F0F2F4;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	.at-sec-title2 {
+		max-width: 445px;
+		.sec_title {
+			span {
+				opacity: .5;
+			}
+		}
+	}
+}
+.at-award3-wrap {
+	gap: 40px;
+	margin-top: -30px;
+	align-items: center;
+	justify-content: space-between;
+}
+.at-award3-tab {
+	max-width: 442px;
+}
+.at-award3-tab-btn {
+	width: 100%;
+	max-width: 815px;
+}
+.aw3-btn-text {
+	z-index: 1;
+	overflow: hidden;
+	padding: 40px 0px;
+	position: relative;
+	transition: all 500ms ease-in-out;
+	border-bottom: 1px solid #07000E33;
+	&:before {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		z-index: -2;
+		height: 0%;
+		content: '';
+		position: absolute;
+		transform-origin: top;
+		border-radius: 8px;
+		transition: all 500ms ease-in-out;
+		background: linear-gradient(45deg, #FFD600 8.39%, #FF0100 50%, #D800B9 91.61%);
+	}
+	.aw3-bg {
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		height: 0%;
+		opacity: 0;
+		overflow: hidden;
+		border-radius: 8px;
+		transform-origin: top;
+		transition: all 500ms ease-in-out;
+	}
+	.aw3-text {
+		display: flex;
+		font-family: var(--at-sora);
+		justify-content: space-between;
+		span {
+			color: #5259EB;
+		}
+		b {
+			font-weight: 400;
+			margin-left: 32px;
+			color: var(--at-black1);
+		}
+		strong {
+			color: #5A595C;
+			font-size: 18px;
+			font-weight: 400;
+			font-family: var(--at-dm);
+		}
+	}
+}
+.at-award3-tab-btn {
+	.nav-tabs .nav-item.show .nav-link,
+	.nav-tabs .nav-link.active,
+	.nav-tabs .nav-link {
+		padding: 0;
+	}
+}
+.at-award3-tab-btn .nav-tabs .nav-link.active {
+	.aw3-btn-text {
+		padding: 40px 32px;
+		border-bottom: 1px solid transparent;
+		&:before {
+			opacity: 1;
+			height: 100%;
+			transition-delay: 400ms;
+		}
+		.aw3-bg {
+			opacity: 1;
+			height: 96%;
+		}
+		.aw3-text {
+			span {
+				color: #FF4C13;
+			}
+			b {
+				color: #fff;
+				font-weight: 700;
+			}
+			strong {
+				color: #fff;
+			}
+		}
+	}
+}

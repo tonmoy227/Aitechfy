@@ -630,7 +630,7 @@ Last change:    00/00/00
 		}
 	});
 
-
+// Counter
 	document.addEventListener("DOMContentLoaded", () => {
 		const counters = document.querySelectorAll('.counter1');
 		counters.forEach(counter => {
@@ -660,5 +660,90 @@ Last change:    00/00/00
 		});
 	});
 
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var AiCount = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.at-about3-counter-wrap',
+				start: "top 20%",
+				end: "top -100%",
+				scrub: 2,
+				pin: false,
+				pinSpacing: false,
+				markers: false,
+			}
+
+		});
+		AiCount
+		.from( ".at-ab3-count-item:nth-child(1) .inner-item" , {   y: -540,   duration: 1, ease: "power2.out"})
+		.to( ".at-ab3-count-item:nth-child(1) .item-img" , {   height: 0, opacity: 0,   duration: 1, transformOrigin: "top", ease: "power2.out"},"<=")
+		.from( ".at-ab3-count-item:nth-child(2) .inner-item" , {   y: -740,   duration: 1, ease: "power2.out"},"<= .05")
+		.to( ".at-ab3-count-item:nth-child(2) .item-img" , {   height: 0, opacity: 0,   duration: 1, transformOrigin: "top", ease: "power2.out"},"<=")
+		.from( ".at-ab3-count-item:nth-child(4) .inner-item" , {   y: -640,   duration: 1, ease: "power2.out"},"<= .05")
+		.to( ".at-ab3-count-item:nth-child(4) .item-img" , {   height: 0, opacity: 0, x: 50,   duration: 1, transformOrigin: "top", ease: "power2.out"},"<=")
+		.from( ".at-ab3-count-item:nth-child(3) .inner-item" , {   y: -360,  duration: 1, ease: "power2.out"},"<= .05")
+		.to( ".at-ab3-count-item:nth-child(3) .item-img" , {   height: 0, opacity: 0,  x: 50,   duration: 1, transformOrigin: "top", ease: "power2.out"},"<=")
+		.from( ".at-ab3-count-item:nth-child(5) .inner-item" , {   y: -600,   duration: 1, ease: "power2.out"},"<= .05")
+		.to( ".at-ab3-count-item:nth-child(5) .item-img" , {   height: 0, opacity: 0,   duration: 1, transformOrigin: "top", ease: "power2.out"},"<=")
+
+	};
+
+
+
+	document.querySelectorAll(".at-project3-item").forEach((projectItem) => {
+		const textEl = projectItem.querySelector(".item-text");
+		projectItem.addEventListener("mousemove", (e) => {
+			const rect = projectItem.getBoundingClientRect();
+			const x = e.clientX - rect.left;
+			const y = e.clientY - rect.top;
+			const moveX = (x / rect.width - 0.5) * 40; 
+			const moveY = (y / rect.height - 0.5) * 40;
+
+			gsap.to(textEl, {
+				x: moveX,
+				y: moveY,
+				duration: 0.4,
+				ease: "power2.out"
+			});
+		});
+		projectItem.addEventListener("mouseleave", () => {
+			gsap.to(textEl, {
+				x: 0,
+				y: 0,
+				duration: 0.6,
+				ease: "power3.out"
+			});
+		});
+	});
+
+	if (window.matchMedia("(min-width: 1200px)").matches) {
+		let proSroll = gsap.timeline();
+		let otherSections_2 = document.querySelectorAll('.at-project3-item')
+		otherSections_2.forEach((section, index, i) => {
+			gsap.set(otherSections_2, {
+				scale: 1 
+			});
+			proSroll.to(section, {
+				scale: index === otherSections_2.length - 1 ? 1 : 0.9,
+				scrollTrigger: {
+					trigger: section,
+					pin: section,
+					scrub: 1,
+					start: "top 5%",
+					end: "bottom 100%",
+					ease: "none",
+					endTrigger: '.at-project3-content',
+					pinSpacing: false,
+					markers: false,
+				},
+			})
+		});
+	}
+
+	$(document).ready(function() {
+		$('#orderTab .nav-link').hover(function() {
+			$(this).tab('show');
+		});
+	});
+	
 
 })(jQuery);
