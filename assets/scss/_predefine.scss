@@ -88,7 +88,10 @@ body::-webkit-scrollbar-thumb {
 	}
 }
 .marquee-left,
-.marquee-right {
+.marquee-right,
+.marquee-left2,
+.marquee-right2 {
+	overflow: hidden;
 	display: flow-root;
 }
 #preloader { 

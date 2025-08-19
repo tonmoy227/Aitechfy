@@ -129,6 +129,24 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+	$('.marquee-left2').marquee({
+		gap: 30,
+		speed: 150,
+		delayBeforeStart: 0,
+		direction: 'left',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
+	$('.marquee-right2').marquee({
+		gap: 30,
+		speed: 150,
+		delayBeforeStart: 0,
+		direction: 'right',
+		duplicated: true,
+		pauseOnHover: true,
+		startVisible:true,
+	});
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -745,5 +763,58 @@ Last change:    00/00/00
 		});
 	});
 	
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var ATWORKPROCESS = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.at-testi3-pinned',
+				start: "top 12%",
+				end: "top -100%",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
+			}
+
+		});
+		ATWORKPROCESS
+		.from( ".at-testi3-item:nth-child(2)" , { opacity: 1,   y: 260,   duration: 1, ease: "power2.out"})
+		.from( ".at-testi3-item:nth-child(3)" , { opacity: 1,   y: 480,   duration: 1, ease: "power2.out"},"<= .3")
+		.from( ".at-testi3-item:nth-child(4)" , { opacity: 1,   y: 700,   duration: 1, ease: "power2.out"},"<= .3")
+		.from( ".at-testi3-btn" , { opacity: 1,   y: 600,   duration: 1, ease: "power2.out"},"<= .1")
+	};
+
+	$('.at-gallery3-row1').magnificPopup({
+		delegate: '.at-gallery3-img a', 
+		type: 'image',
+		gallery: {
+			enabled: true, 
+			tPrev: 'Previous (Left arrow key)', 
+			tNext: 'Next (Right arrow key)',  
+			tCounter: '%curr% of %total%' 
+		}
+	});
+
+
+	if (window.matchMedia("(min-width: 1200px)").matches) { 
+		var ATWORKPROCESS = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.at-gallery3-wrapper',
+				start: "top 15%",
+				end: "top -100%",
+				scrub: 1,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
+			}
+
+		});
+		ATWORKPROCESS
+		.from( ".at-gallery3-content" , { scale: 2, y: -340,   duration: 1, ease: "power2.out"})
+	};
+
+
+
+
+
 
 })(jQuery);
