@@ -1,4 +1,19 @@
+@keyframes arrow {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(30deg);
+	}
+
+	0% {
+		transform: rotate(0deg);
+	}
+}
+
 .at-price3-sec {
+	z-index: 1;
 	background-color: #F0F2F4;
 	&:before {
 		left: 0;
@@ -11,8 +26,10 @@
 	}
 	.at-pr3-bg {
 		left: 0;
+		top: -10%;
 		width: 100%;
 		height: 85%;
+		z-index: -1;
 	}
 	.at-sec-title2 {
 		margin: 0 auto;
@@ -21,6 +38,10 @@
 	.at-pr3-img {
 		top: 90px;
 		left: 130px;
+		z-index: -1;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 }
 .at-price3-btn-grp {
@@ -93,16 +114,31 @@
 	}
 }
 .at-price3-content {
+	z-index: 1;
 	.at-pr3-shape1 {
 		top: -30px;
 		right: 25%;
+		z-index: -1;
+		transform-origin: top right;
+		animation: arrow 4s var(--cube-1) infinite;
+		@media #{$md,$sm,$xs,$xxs} {
+			display: none;
+		}
 	}
 }
 @keyframes rotateX {
 	from { transform: rotateX(0deg); }
 	to   { transform: rotateX(360deg) scaleX(1.1); }
 }
+.at-price3-card-wrap {
+	gap: 30px 40px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+}
 .at-price3-card {
+	gap: 15px;
 	z-index: 1;
 	width: 100%;
 	padding: 44px;
@@ -110,6 +146,9 @@
 	border-radius: 12px;
 	background-color: #fff;
 	justify-content: space-between;
+	@media #{$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+	}
 	.at-pr-bg {
 		top: 0;
 		left: 0;
@@ -182,6 +221,9 @@
 			position: absolute;
 			background-color: #D9D9D9;
 			transition: all 500ms ease-in-out;
+			@media #{$xl,$lg,$md,$sm,$xs,$xxs} {
+				display: none;
+			}
 		}
 		h3 {
 			opacity: .48;

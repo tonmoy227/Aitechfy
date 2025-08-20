@@ -147,6 +147,25 @@ Last change:    00/00/00
 		pauseOnHover: true,
 		startVisible:true,
 	});
+
+	if($('.at-slider-title').length) {
+		var txtSplit = $('.at-slider-title');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "lines",
+				linesClass: "split-line"
+			});
+		});
+	}
+	if($('.at-slider-letter').length) {
+		var txtSplit = $('.at-slider-letter');
+		if(txtSplit.length == 0) return; gsap.registerPlugin(SplitText); txtSplit.each(function(index, el) {
+			el.split = new SplitText(el, { 
+				type: "chars",
+				charsClass: "chars"
+			});
+		});
+	}
 	// windows-loaded-before-functions
 	document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener('load', function(){
@@ -228,7 +247,38 @@ Last change:    00/00/00
 				.from(".at-hero2-client-wrap .at-hr2-cl-shape", { opacity:0, rotate: 180,  yPercent: -100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"<")
 				.from(".at-hero2-client li", { opacity:0, scale: 0, rotate: 360,  yPercent: -100, duration: 3.5, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"< .5")
 				.from(".at-hero2-text .at-btn2", { opacity:0,   yPercent: 100, duration: 1, transformOrigin: "bottom",  ease: "power1.out" },"< .5")
+
+				if ($('.at-hero3-slider').length > 0 ) {
+					var slider = new Swiper('.at-hero3-slider', {
+						spaceBetween: 0,
+						slidesPerView: 1,
+						loop: true,
+						speed: 1000,
+						effect: "fade",
+						autoplay: {
+							enabled: true,
+							delay: 6000
+						},
+						pagination: {
+							el: ".at-hr2-pagi",
+							clickable: true,
+						},
+						navigation: {
+							prevEl: ".at-hr2-prev",
+							nextEl: ".at-hr2-next",
+						},
+
+					});
+				};
+
+				const AIHERO3 = gsap.timeline();
+				AIHERO3
+				.from(".at-hero3-sec .at-hr3-shape3", { opacity:0, rotate: 0,  yPercent: -100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" })
+				.from(".at-hero3-sec .at-hr3-shape2", { opacity:0, rotate: 0,  yPercent: 100, duration: 4, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"< .2")
+				.from(".at-hero3-sec .at-hero3-social", { opacity:0, rotate: 0,  xPercent: -100, duration: 2, transformOrigin: "center",  ease: "elastic.out(1,0.7)" },"< .2")
 				
+
+
 			}, 700);
 		})		
 	});
@@ -619,33 +669,25 @@ Last change:    00/00/00
 	};
 
 // Price Switch
-	var e = document.getElementById("filt-monthly"),
-	d = document.getElementById("filt-hourly"),
-	t = document.getElementById("switcher"),
-	m = document.getElementById("monthly"),
-	y = document.getElementById("hourly");
-	function activateMonthly() {
-		t.checked = false;
-		e.classList.add("toggler--is-active");
-		d.classList.remove("toggler--is-active");
-		m.classList.remove("hide");
-		y.classList.add("hide");
-	}
-	function activateHourly() {
-		t.checked = true;
-		d.classList.add("toggler--is-active");
-		e.classList.remove("toggler--is-active");
-		m.classList.add("hide");
-		y.classList.remove("hide");
-	}
-	e.addEventListener("click", activateMonthly);
-	d.addEventListener("click", activateHourly);
-	t.addEventListener("click", function () {
-		if (t.checked) {
-			activateHourly();
-		} else {
-			activateMonthly();
-		}
+	document.addEventListener("DOMContentLoaded", () => {
+		const e = document.getElementById("filt-monthly"),
+		d = document.getElementById("filt-hourly"),
+		t = document.getElementById("switcher"),
+		m = document.getElementById("monthly"),
+		y = document.getElementById("hourly");
+
+		const activate = (mode) => {
+			const isHourly = mode === "hourly";
+			t.checked = isHourly;
+			e.classList.toggle("toggler--is-active", !isHourly);
+			d.classList.toggle("toggler--is-active", isHourly);
+			m.classList.toggle("hide", isHourly);
+			y.classList.toggle("hide", !isHourly);
+		};
+
+		e.addEventListener("click", () => activate("monthly"));
+		d.addEventListener("click", () => activate("hourly"));
+		t.addEventListener("click", () => activate(t.checked ? "hourly" : "monthly"));
 	});
 
 // Counter
@@ -733,7 +775,7 @@ Last change:    00/00/00
 		});
 	});
 
-	if (window.matchMedia("(min-width: 1200px)").matches) {
+	if (window.matchMedia("(min-width: 992px)").matches) {
 		let proSroll = gsap.timeline();
 		let otherSections_2 = document.querySelectorAll('.at-project3-item')
 		otherSections_2.forEach((section, index, i) => {
@@ -812,8 +854,89 @@ Last change:    00/00/00
 		.from( ".at-gallery3-content" , { scale: 2, y: -340,   duration: 1, ease: "power2.out"})
 	};
 
+	gsap.utils.toArray(' .top_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 80%",
+				end: "top 60%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
 
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, x: "-200"})
+	});
 
+	gsap.utils.toArray(' .top_view2').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 100%",
+				end: "top 80%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 1, scale: 1, y: "300"})
+	});
+	gsap.utils.toArray(' .right_view').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				start: "top 50%",
+				end: "top -50%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { scale: 1, x: "300"})
+	});
+
+	gsap.utils.toArray(' .at-img-up').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".at-why-c3-content",
+				scrub: 1.5,
+				end: "top 20%",
+				start: "top 70%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { scale: 1, yPercent: "100"})
+	});
+
+	gsap.utils.toArray(' .top_list').forEach((el, index) => { 
+		let tlcta = gsap.timeline({
+			scrollTrigger: {
+				trigger: el,
+				scrub: 1.5,
+				end: "top 70%",
+				start: "top 100%",
+				toggleActions: "play none none reverse",
+				markers: false
+			}
+		})
+
+		tlcta
+		.set(el, {transformOrigin: 'center center'})
+		.from(el, { opacity: 0, scale: 1, x: -100, y: "100"})
+	});
 
 
 

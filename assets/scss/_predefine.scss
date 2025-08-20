@@ -423,7 +423,7 @@ a {
 			border-radius: 6px;
 			position: absolute;
 			background-color: #fff;
-			transition: all 500ms ease-in-out;
+			transition: 400ms cubic-bezier(1,.72,.4,.97);
 		}
 		.icon-wrap {
 			width: 44px;
@@ -433,7 +433,7 @@ a {
 			border-radius: 6px;
 			background-color: #fff;
 			i {
-				transition: all 500ms ease-in-out;
+				transition: 400ms cubic-bezier(1,.72,.4,.97);
 				&:last-child {
 					top: 50%;
 					left: -50%;
@@ -452,13 +452,13 @@ a {
 				font-weight: 600;
 				white-space: nowrap;
 				display: inline-block;
-				transition: all 500ms ease-in-out;
+				transition: 400ms cubic-bezier(1,.72,.4,.97);
 				&:last-child {
 					left: 0;
 					top: 80px;
 					position: absolute;
 					color: var(--at-black2);
-					transition: all 500ms ease-in-out;
+					transition: 400ms cubic-bezier(1,.72,.4,.97);
 				}
 			}
 		}
@@ -556,6 +556,18 @@ a {
 		font-weight: 600;
 		line-height: 1.13;
 		letter-spacing: -2px;
+		@media #{$sm} {
+			font-size: 40px;
+		}
+		@media #{$xs} {
+			font-size: 35px;
+		}
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+		@media #{$xxxs} {
+			font-size: 28px;
+		}
 	}
 	p {
 		padding-top: 20px;
