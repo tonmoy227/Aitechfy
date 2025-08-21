@@ -407,7 +407,9 @@ a {
 	padding: 6px;
 	border-radius: 6px;
 	display: inline-block;
-	background: var(--at-prime-c3);
+	background: linear-gradient(90deg, var(--at-c6) 0%, var(--at-c7) 50%, var(--at-c6));
+	background-size: 200%, 1px;
+	transition: all 500ms ease-in-out;
 	a {
 		gap: 10px;
 		z-index: 1;
@@ -487,6 +489,9 @@ a {
 				width: 100%;
 			}
 		}
+	}
+	&:hover {
+		background-position: 120%;
 	}
 }
 

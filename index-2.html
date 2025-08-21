@@ -1383,6 +1383,7 @@
 <!-- Start of Gallery section
 	============================================= -->
 	<section id="at-gallery3" class="at-gallery3-sec pb-120 over-hidden">
+		<h3 class="at-gal2-title text-center text-uppercase">Gallery</h3>
 		<div class="at-gallery3-wrapper over-hidden">
 			<div class="at-gallery3-content">
 				<div class="at-gallery3-row1 marquee-left2">
@@ -1696,10 +1697,19 @@
 		<div class="at-ftr3-cta pt-120  over-hidden position-relative">
 			<div class="at-ftr3-shape1 position-absolute wow slideInUp" data-wow-delay="250ms" data-wow-duration="1200ms">
 				<svg width="1620" height="1620" viewBox="0 0 1620 1620" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<circle cx="810" cy="810" r="462.357" stroke="#F0F0F0" stroke-opacity="0.2"/>
-					<circle cx="810" cy="810" r="274.5" stroke="#F0F0F0" stroke-opacity="0.2"/>
-					<circle cx="810.001" cy="810" r="635.929" stroke="#F0F0F0" stroke-opacity="0.2"/>
-					<circle cx="810" cy="810" r="809.5" stroke="#F0F0F0" stroke-opacity="0.2"/>
+					<defs>
+						<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+							<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+							<feMerge>
+								<feMergeNode in="blur"/>
+								<feMergeNode in="SourceGraphic"/>
+							</feMerge>
+						</filter>
+					</defs>
+					<circle class="glow c1" cx="810" cy="810" r="462.357" stroke="#F0F0F0" stroke-opacity="0.8"/>
+					<circle class="glow c2" cx="810" cy="810" r="274.5" stroke="#F0F0F0" stroke-opacity="0.8"/>
+					<circle class="glow c3" cx="810.001" cy="810" r="635.929" stroke="#F0F0F0" stroke-opacity="0.8"/>
+					<circle class="glow c4" cx="810" cy="810" r="809.5" stroke="#F0F0F0" stroke-opacity="0.8"/>
 				</svg>
 			</div>
 			<div class="cta-content position-relative headline-3 text-center">
@@ -1733,9 +1743,12 @@
 					</div>
 				</div>
 				<div class="at-ftr3-widget-area d-flex justify-content-between">
-					<div class="at-ftr3-widget">
+					<div class="at-ftr3-widget position-relative">
 						<div class="desc-widget pera-content">
 							<p>Aitechfy is a cutting-edge AI agency specializing in innovative solutions that enhance efficiency and user experience. We harness AI to drive business growth, streamline workflows, and deliver impactful digital transformations.</p>
+						</div>
+						<div class="ftr3-img position-absolute wow slideInUp" data-wow-delay="450ms" data-wow-duration="1200ms">
+							<img src="assets/img/about/ft3.png" alt="">
 						</div>
 					</div>
 					<div class="at-ftr3-widget">

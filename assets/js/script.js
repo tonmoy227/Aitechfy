@@ -131,7 +131,7 @@ Last change:    00/00/00
 	});
 	$('.marquee-left2').marquee({
 		gap: 30,
-		speed: 150,
+		speed: 100,
 		delayBeforeStart: 0,
 		direction: 'left',
 		duplicated: true,
@@ -140,7 +140,7 @@ Last change:    00/00/00
 	});
 	$('.marquee-right2').marquee({
 		gap: 30,
-		speed: 150,
+		speed: 100,
 		delayBeforeStart: 0,
 		direction: 'right',
 		duplicated: true,
@@ -255,10 +255,10 @@ Last change:    00/00/00
 						loop: true,
 						speed: 1000,
 						effect: "fade",
-						autoplay: {
-							enabled: true,
-							delay: 6000
-						},
+						// autoplay: {
+						// 	enabled: true,
+						// 	delay: 6000
+						// },
 						pagination: {
 							el: ".at-hr2-pagi",
 							clickable: true,
@@ -724,7 +724,7 @@ Last change:    00/00/00
 		var AiCount = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.at-about3-counter-wrap',
-				start: "top 20%",
+				start: "top 70%",
 				end: "top -100%",
 				scrub: 2,
 				pin: false,
@@ -755,13 +755,13 @@ Last change:    00/00/00
 			const rect = projectItem.getBoundingClientRect();
 			const x = e.clientX - rect.left;
 			const y = e.clientY - rect.top;
-			const moveX = (x / rect.width - 0.5) * 40; 
-			const moveY = (y / rect.height - 0.5) * 40;
+			const moveX = (x / rect.width - 0.05) * 1000; 
+			const moveY = (y / rect.height - 0.5) * 150;
 
 			gsap.to(textEl, {
 				x: moveX,
 				y: moveY,
-				duration: 0.4,
+				duration: 4,
 				ease: "power2.out"
 			});
 		});
@@ -769,7 +769,7 @@ Last change:    00/00/00
 			gsap.to(textEl, {
 				x: 0,
 				y: 0,
-				duration: 0.6,
+				duration: 5,
 				ease: "power3.out"
 			});
 		});
@@ -809,7 +809,7 @@ Last change:    00/00/00
 		var ATWORKPROCESS = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.at-testi3-pinned',
-				start: "top 12%",
+				start: "top 15%",
 				end: "top -100%",
 				scrub: 1,
 				pin: true,
@@ -819,9 +819,9 @@ Last change:    00/00/00
 
 		});
 		ATWORKPROCESS
-		.from( ".at-testi3-item:nth-child(2)" , { opacity: 1,   y: 260,   duration: 1, ease: "power2.out"})
-		.from( ".at-testi3-item:nth-child(3)" , { opacity: 1,   y: 480,   duration: 1, ease: "power2.out"},"<= .3")
-		.from( ".at-testi3-item:nth-child(4)" , { opacity: 1,   y: 700,   duration: 1, ease: "power2.out"},"<= .3")
+		.from( ".at-testi3-item:nth-child(2)" , {    y: 580,   duration: 1, ease: "power2.out"})
+		.from( ".at-testi3-item:nth-child(3)" , {    y: 580,   duration: 1, ease: "power2.out"},"<= .3")
+		.from( ".at-testi3-item:nth-child(4)" , {    y: 800,   duration: 1, ease: "power2.out"},"<= .3")
 		.from( ".at-testi3-btn" , { opacity: 1,   y: 600,   duration: 1, ease: "power2.out"},"<= .1")
 	};
 

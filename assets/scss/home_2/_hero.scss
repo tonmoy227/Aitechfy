@@ -39,12 +39,14 @@
 		}
 		a {
 			color: #fff;
+			opacity: .8;
 			display: block;
 			margin: 24px 0px;
 			@media #{$xxl} {
 				font-size: 14px;
 			}
 			&:hover {
+				opacity: 1;
 				color: var(--at-c6);
 			}
 		}
@@ -60,7 +62,7 @@
 	z-index: 3;
 	.at-hr3-shape1 {
 		top: 0;
-		right: 0%;
+		right: -15%;
 		opacity: 0;
 		z-index: -2;
 		overflow: hidden;

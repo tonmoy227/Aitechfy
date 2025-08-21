@@ -96,6 +96,10 @@
 			backdrop-filter: blur(8px);
 			white-space: nowrap;
 			background-color: rgba(255, 255, 255, 0.6);
+			&:hover {
+				color: #fff;
+				background: var(--at-c3);
+			}
 			@media #{$xxs} {
 				gap: 0px 10px;
 				padding: 12px 15px;

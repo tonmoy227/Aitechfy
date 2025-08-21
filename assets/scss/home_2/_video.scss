@@ -1,6 +1,7 @@
 .at-video3-sec {
 	z-index: 1;
 	.at-video3-img {
+		height: 100vh;
 		padding: 380px 0px;
 		@media #{$sm,$xs,$xxs} {
 			padding: 280px 0px;
