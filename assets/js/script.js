@@ -411,6 +411,47 @@ Last change:    00/00/00
 			},
 		});
 	};
+	if ($('.at-client1-slider').length > 0 ) {
+		var slider = new Swiper('.at-client1-slider', {
+			spaceBetween: 40,
+			slidesPerView: 5,
+			loop: true,
+			autoplay: {
+				enabled: true,
+				delay: 6000
+			},
+			speed: 400,
+			breakpoints: {
+				'1600': {
+					slidesPerView: 5,
+				},
+				'1200': {
+					slidesPerView: 5,
+					spaceBetween: 40,
+				},
+				'992': {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				'768': {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				'576': {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				'480': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				'0': {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+			},
+		});
+	};
 	var quick_view = new Swiper(".at-ser1-thumb", {
 		loop: true,
 		spaceBetween: 0,
@@ -675,6 +716,11 @@ Last change:    00/00/00
 		t = document.getElementById("switcher"),
 		m = document.getElementById("monthly"),
 		y = document.getElementById("hourly");
+
+		if (!e || !d || !t || !m || !y) {
+			console.warn("Toggle elements not found in DOM");
+			return;
+		}
 
 		const activate = (mode) => {
 			const isHourly = mode === "hourly";
