@@ -1,0 +1,159 @@
+.at-whc1-item1 {
+	max-width: 645px;
+}
+.at-whc1-content {
+	gap: 30px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+.at-whc1-info1 {
+	padding: 50px 50px 100px;
+	background-color: #cefb56;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	@media #{$xs,$xxs} {
+		padding: 30px 20px 100px;
+	}
+	span {
+		color: #fff;
+		font-size: 22px;
+		padding: 10px 25px;
+		border-radius: 40px;
+		margin-bottom: 20px;
+		background-color: var(--at-black1);
+		@media #{$xs,$xxs} {
+			font-size: 18px;
+		}
+	}
+	h2 {
+		font-size: 36px;
+		font-weight: 800;
+		padding-bottom: 25px;
+		@media #{$xxs} {
+			font-size: 30px;
+		}
+	}
+	p {
+		font-size: 22px;
+		font-weight: 500;
+
+	}
+	.item-arrow {
+		right: 30px;
+		bottom: 30px;
+		position: absolute;
+		a {
+			width: 65px;
+			height: 65px;
+			border-radius: 100%;
+			background-color: #fff;
+			i {
+				font-size: 25px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+.at-whc1-item2 {
+	max-width: 360px;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	.item-text {
+		padding: 45px;
+		background-color: #e7eee1;
+		@media #{$xl} {
+			padding: 30px;
+		}
+		h3 {
+			font-size: 60px;
+			font-weight: 800;
+		}
+		p {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 1.2;
+			color: var(--at-black1);
+			@media #{$xl} {
+				font-size: 24px;
+			}
+		}
+	}
+	.item-img {
+		height: 480px;
+		overflow: hidden;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			height: auto;
+		}
+	}
+}
+.at-whc1-item3 {
+	width: 100%;
+	z-index: 1;
+	padding: 50px;
+	max-width: 395px;
+	position: relative;
+	@media #{$lg,$md,$sm,$xs,$xxs} {
+		max-width: 100%;
+	}
+	&:before {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		content: '';
+		height: 100%;
+		opacity: .7;
+		position: absolute;
+		background-color: var(--at-black1);
+	}
+	.item-text {
+		h3 {
+			color: #fff;
+			font-size: 60px;
+			font-weight: 800;
+		}
+		p {
+			color: #fff;
+			font-size: 30px;
+			font-weight: 700;
+		}
+	}
+	.item-logo-wrap {
+		.item-logo {
+			margin-bottom: 8px;
+		}
+	}
+	.item-bottom {
+		left: 40px;
+		bottom: 40px;
+		position: absolute;
+		@media #{$lg,$md,$sm,$xs,$xxs} {
+			position: static;
+			margin-top: 40px;
+		}
+		a {
+			gap: 15px;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			span {
+				color: #fff;
+				max-width: 215px;
+			}
+		}
+		i {
+			width: 42px;
+			height: 42px;
+			display: flex;
+			border-radius: 100%;
+			background-color: #fff;
+			align-items: center;
+			justify-content: center;
+			transform: rotate(-45deg);
+		}
+	}
+}

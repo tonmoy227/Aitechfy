@@ -985,5 +985,18 @@ Last change:    00/00/00
 	});
 
 
+	$('.at-item-active').each(function () {
+		var $wrap = $(this);
+		var $items = $wrap.find('.at-ser1-list');
+
+		$items.on('mouseover', function () {
+			$items.removeClass('active');
+			$(this).addClass('active');
+		});
+	});
+
+	$(document).on('click', '.at-faq3-wrap .accordion-item', function(){
+		$(this).addClass('faq_active').siblings().removeClass('faq_active')
+	});
 
 })(jQuery);
