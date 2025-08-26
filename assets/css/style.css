@@ -9124,6 +9124,24 @@ a:hover, a:focus {
           transform: rotate(-45deg);
 }
 
+.at-faq-price-content {
+  gap: 40px 60px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-faq-price-content {
+    gap: 40px 30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-faq-price-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .at-price1-wrap {
   width: 100%;
   max-width: 700px;
@@ -9132,14 +9150,53 @@ a:hover, a:focus {
 .at-price1-item {
   gap: 30px;
   z-index: 1;
-  padding: 30px;
+  width: 94%;
+  margin: 0 auto;
   overflow: hidden;
-  background-color: #f6f6f6;
+  padding: 26px 30px;
+  background-color: #fff;
+  -webkit-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.at-price1-item:before {
+  top: 0;
+  right: 23.4%;
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background-color: #efefef;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item:before {
+    display: none;
+  }
 }
 .at-price1-item .item-bg {
   top: 0;
   left: 0;
+  height: 0;
+  opacity: 0;
   z-index: -1;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.at-price1-item .item-bg:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .at-price1-item .item-check a {
   width: 40px;
@@ -9148,17 +9205,66 @@ a:hover, a:focus {
   background-color: #f6f6f6;
 }
 .at-price1-item .item-text {
-  gap: 45px;
+  gap: 30px 45px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item .item-text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .at-price1-item .item-text h3 {
   font-size: 30px;
   font-weight: 800;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .at-price1-item .item-text .inner-item {
   max-width: 380px;
 }
+.at-price1-item .item-text .inner-item p {
+  padding-bottom: 15px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.at-price1-item .item-text .inner-item ul {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item .item-text .inner-item ul {
+    height: 100%;
+  }
+}
+.at-price1-item .item-text .inner-item li {
+  font-weight: 700;
+  margin-bottom: 8px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.at-price1-item .item-text .inner-item li i {
+  margin-right: 5px;
+  background: var(--at-prime-c4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .at-price1-item .item-text .inner-price {
   width: 110px;
+  padding-left: 20px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item .item-text .inner-price {
+    padding-left: 0;
+  }
 }
 .at-price1-item .item-text .inner-price span {
   color: #fff;
@@ -9170,10 +9276,69 @@ a:hover, a:focus {
 .at-price1-item .item-text .inner-price h4 {
   font-size: 38px;
   font-weight: 800;
+  padding: 8px 0px 5px;
 }
 .at-price1-item .item-text .inner-price p {
   font-size: 14px;
   font-weight: 500;
+}
+.at-price1-item:is(.active) {
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 109px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 3px 109px 0px rgba(0, 0, 0, 0.13);
+}
+.at-price1-item:is(.active):before {
+  right: 25%;
+  background-color: #2a1d62;
+}
+.at-price1-item:is(.active) .item-bg {
+  opacity: 1;
+  height: 100%;
+}
+.at-price1-item:is(.active) .item-text h3 {
+  color: #fff;
+  padding-bottom: 5px;
+}
+.at-price1-item:is(.active) .item-text .inner-item p {
+  color: #fff;
+}
+.at-price1-item:is(.active) .item-text .inner-item li {
+  color: #fff;
+}
+.at-price1-item:is(.active) .item-text .inner-item ul {
+  height: 100px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 481px) and (max-width: 575px), (max-width: 480px) {
+  .at-price1-item:is(.active) .item-text .inner-item ul {
+    height: 100%;
+  }
+}
+.at-price1-item:is(.active) .item-text .inner-price {
+  padding-left: 0;
+}
+.at-price1-item:is(.active) .item-text .inner-price h4 {
+  color: #fff;
+}
+.at-price1-item:is(.active) .item-text .inner-price p {
+  color: #fff;
+}
+
+.at-price-btn {
+  margin: 0 auto;
+  max-width: 94%;
+  margin-top: 20px;
+}
+.at-price-btn a {
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px 15px;
+  background: var(--at-prime-c4);
+}
+.at-price-btn a i {
+  margin-left: 8px;
 }
 
 /*---------------------------------------------------- */

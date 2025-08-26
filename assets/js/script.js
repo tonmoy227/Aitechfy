@@ -995,6 +995,16 @@ Last change:    00/00/00
 		});
 	});
 
+	$('.at-price1-wrap').each(function () {
+		var $wrap = $(this);
+		var $items = $wrap.find('.at-price1-item');
+
+		$items.on('mouseover', function () {
+			$items.removeClass('active');
+			$(this).addClass('active');
+		});
+	});
+	
 	$(document).on('click', '.at-faq3-wrap .accordion-item', function(){
 		$(this).addClass('faq_active').siblings().removeClass('faq_active')
 	});
