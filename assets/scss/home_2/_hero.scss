@@ -203,6 +203,10 @@
 	right: 64px;
 	bottom: 64px;
 	position: absolute;
+	@media #{$sm,$xs,$xxs} {
+		right: 30px;
+		bottom: 30px;
+	}
 	.at-hr2-next,
 	.at-hr2-prev {
 		color: #fff;
@@ -223,6 +227,9 @@
 			position: absolute;
 			background: var(--at-prime-c2);
 			transition: all 500ms ease-in-out;
+			@media #{$sm,$xs,$xxs} {
+				height: 100%;
+			}
 		}
 		&:hover {
 			&:before {

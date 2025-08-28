@@ -30,7 +30,9 @@
   			</div>
   		</div>
   	</div>
-
+  	<div class="at-up">
+  		<a href="#" class="at-scrollup ver_2 text-center">TOP</a>
+  	</div>
 <!-- Start of Header section
 	============================================= -->
 	<header id="at-header" class="at-header-section header_style_two  txa_sticky_header">
@@ -107,7 +109,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="at-mobile-menu-btn">
+			<div class="at-mobile-menu-btn mobile_menu_button open_mobile_menu">
 				<button>
 					<span></span>
 					<span></span>
@@ -116,6 +118,91 @@
 			</div>
 		</div>
 	</header>
+
+	<!-- Mobile-start -->
+	<div class="mobile_menu lenis lenis-smooth ofcanvas_sidebar position-relative">
+		<div class="mobile_menu_wrap">
+			<div class="mobile_menu_overlay open_mobile_menu"></div>
+			<div class="mobile_menu_content">
+				<div class="mobile_menu_close open_mobile_menu">
+					<i class="fas fa-times"></i>
+				</div>
+				<div class="m-brand-logo">
+					<a href="#"><img src="assets/img/logo/logo-1.svg" alt=""></a> 
+				</div>
+				<div class="mobile-search-bar position-relative">
+					<form action="#">
+						<input type="text" name="search" placeholder="Keywords">
+						<button><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<nav class="mobile-main-navigation  clearfix ul-li">
+					<ul id="m-main-nav" class="nav navbar-nav clearfix">
+						<li class="dropdown active">
+							<a href="!#">Home</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a class="active" href="index.html">Home Page 1</a></li>
+								<li><a href="index-2.html">Home Page 2</a></li>
+								<li><a href="index-3.html">Home Page 3</a></li>
+								<li><a href="index-4.html">Home Page 4</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Solutions</a></li>
+						<li><a href="about.html">About</a></li>
+						<li class="dropdown">
+							<a href="!#">Pages</a>
+							<ul class="dropdown-menu clearfix">
+								<li><a href="service.html">Services</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Services Details</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction </a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="team.html">Team Page</a></li>
+								<li class="dropdown">
+									<a href="service-single.html">Blog</a>
+									<ul class="dropdown-menu clearfix">
+										<li><a href="service-single.html">Construction</a></li>
+										<li><a href="service-single-2.html">Architect Design</a></li>
+										<li><a href="service-single-3.html">Interior Design</a></li>
+										<li><a href="service-single-4.html">3D Animation</a></li>
+										<li><a href="service-single-5.html">House Renovation</a></li>
+										<li><a href="service-single-6.html">Ideas & Inspiration</a></li>
+									</ul>
+								</li>
+								<li><a href="faq.html">FAQ Page</a></li>
+								<li><a href="pricing.html">Pricing Page</a></li>
+								<li><a href="testimonial.html">Testimonial Page</a></li>
+								<li><a href="contact.html">Contact Page</a></li>
+								<li><a href="booking.html">Booking Page</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="!#">Shop</a>
+							<ul class="dropdown-menu clearfix"> 
+								<li><a href="shop.html">Shop Page </a></li>
+								<li><a href="shop-single.html">Shop Details</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="ptx-mobile-header-social text-center">
+					<a href="#"> <i class="fab fa-instagram"></i></a>
+					<a href="#"> <i class="fab fa-linkedin-in"></i></a>
+					<a href="#"> <i class="fab fa-facebook"></i></a>
+					<a href="#"> <i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- /Mobile-Menu -->
+	</div>
 <!-- End of Header section
     ============================================= -->
 
@@ -128,9 +215,9 @@
     		<div class="at-hero1-wrap position-relative">
     			<div class="container">
     				<div class="at-hero1-text headline-1">
-    					<h1 class="hero_title">Skilled <span>AI Services</span> 
+    					<h1 class="hero_title at_hero_title hero_title_1">Skilled <span>AI Services</span> 
     					For Future Growth!</h1>
-    					<div class="at-hero1-desc mt-35 d-flex justify-content-end pera-content">
+    					<div class="at-hero1-desc at-text mt-35 d-flex justify-content-end pera-content">
     						<div class="inner-item">
     							<p>Artificial intelligence is a wide ranging tool that enables you 
     								to rethink how to integrate information, analyze data, 
@@ -242,7 +329,7 @@
     					<div class="subtitle text-uppercase d-flex align-items-center">
     						<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     					</div>
-    					<h2 class="sec_title">
+    					<h2 class="sec_title ai-itm-title ai-itm-anim">
     						Advanced AI 
     						Automations to 
     						Grow business
@@ -256,8 +343,9 @@
     				</div>
     			</div>
     			<div class="at-ab1-img-wrap">
-    				<div class="item-img img-cover">
-    					<img src="assets/img/about/ab4.jpg" alt="">
+    				<div class="item-img over-hidden position-relative img-cover">
+    					<img class="image_item_1" src="assets/img/about/ab4.jpg" alt="">
+    					<img class="image_item_2" src="assets/img/about/ab4.jpg" alt="">
     				</div>
     			</div>
     			<div class="at-ab1-feature">
@@ -289,19 +377,19 @@
 <!-- Start of Service section
     ============================================= -->
     <section id="at-ser1" class="at-ser1-sec pt-130 pb-170 over-hidden position-relative">
-    	<div class="at-ser1-bg img-cover position-absolute"><img src="assets/img/bg/ser-bg2.jpg" alt=""></div>
+    	<div class="at-ser1-bg img-parallax img-cover position-absolute"><img src="assets/img/bg/ser-bg2.jpg" alt=""></div>
     	<div class="container">
     		<div class="at-sec-title3 text-center headline-1 pera-content">
     			<div class="subtitle text-uppercase d-flex justify-content-center align-items-center">
     				<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     			</div>
-    			<h2 class="sec_title">
+    			<h2 class="sec_title ai-itm-title ai-itm-anim">
     				The Complete
     				AI Agent Platform
     			</h2>
     		</div>
     		<div class="at-ser1-content at-item-active">
-    			<div class="at-ser1-list position-relative d-flex justify-content-end">
+    			<div class="at-ser1-list position-relative d-flex justify-content-end wow slideInUp" data-wow-delay="150ms" data-wow-duration="1200ms">
     				<div class="item-text d-flex align-items-center">
     					<div class="item-icon">
     						<i><img src="assets/img/icon/ic10.png" alt=""></i>
@@ -314,7 +402,7 @@
     					<img src="assets/img/service/serv6.jpg" alt="">
     				</div>
     			</div>
-    			<div class="at-ser1-list active position-relative d-flex justify-content-end">
+    			<div class="at-ser1-list active position-relative d-flex justify-content-end wow slideInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
     				<div class="item-text d-flex align-items-center">
     					<div class="item-icon">
     						<i><img src="assets/img/icon/ic10.png" alt=""></i>
@@ -327,7 +415,7 @@
     					<img src="assets/img/service/serv6.jpg" alt="">
     				</div>
     			</div>
-    			<div class="at-ser1-list position-relative d-flex justify-content-end">
+    			<div class="at-ser1-list position-relative d-flex justify-content-end wow slideInUp" data-wow-delay="250ms" data-wow-duration="1200ms">
     				<div class="item-text d-flex align-items-center">
     					<div class="item-icon">
     						<i><img src="assets/img/icon/ic10.png" alt=""></i>
@@ -340,7 +428,7 @@
     					<img src="assets/img/service/serv6.jpg" alt="">
     				</div>
     			</div>
-    			<div class="at-ser1-list position-relative d-flex justify-content-end">
+    			<div class="at-ser1-list position-relative d-flex justify-content-end wow slideInUp" data-wow-delay="300ms" data-wow-duration="1200ms">
     				<div class="item-text d-flex align-items-center">
     					<div class="item-icon">
     						<i><img src="assets/img/icon/ic10.png" alt=""></i>
@@ -367,20 +455,20 @@
     			<div class="subtitle text-uppercase d-flex  align-items-center">
     				<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     			</div>
-    			<h2 class="sec_title">
+    			<h2 class="sec_title ai-itm-title ai-itm-anim">
     				Unleashing the Potential 
     				of Artificial
     			</h2>
     		</div>
     		<div class="at-feat1-content mt-50">
     			<div class="row">
-    				<div class="col-lg-4">
-    					<div class="at-feat1-item">
-    						<div class="item-img mb-45">
+    				<div class="col-lg-4 wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1200ms">
+    					<div class="at-feat1-item"  data-tilt data-tilt-max="5">
+    						<div class="item-img img-cover mb-45">
     							<img src="assets/img/service/ft1.jpg" alt="">
     						</div>
     						<div class="item-text ul-li headline-1 pera-content">
-    							<h3><a href="#">Accounts </a></h3>
+    							<h3 class="href-underline"><a href="#">Accounts </a></h3>
     							<p>Get custom solutions for your business that help 
     							you leverage AI and Automation.</p>
     							<ul>
@@ -390,13 +478,13 @@
     						</div>
     					</div>
     				</div>
-    				<div class="col-lg-4">
-    					<div class="at-feat1-item">
-    						<div class="item-img mb-45">
+    				<div class="col-lg-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
+    					<div class="at-feat1-item"  data-tilt data-tilt-max="5">
+    						<div class="item-img img-cover mb-45">
     							<img src="assets/img/service/ft2.jpg" alt="">
     						</div>
     						<div class="item-text ul-li headline-1 pera-content">
-    							<h3><a href="#">AI Experience Agent </a></h3>
+    							<h3 class="href-underline"><a href="#">AI Experience Agent </a></h3>
     							<p>Get custom solutions for your business that help 
     							you leverage AI and Automation.</p>
     							<ul>
@@ -406,8 +494,8 @@
     						</div>
     					</div>
     				</div>
-    				<div class="col-lg-4">
-    					<div class="at-feat1-item2 position-relative">
+    				<div class="col-lg-4 wow fadeInUp" data-wow-delay="250ms" data-wow-duration="1200ms">
+    					<div class="at-feat1-item2 position-relative"  data-tilt data-tilt-max="5">
     						<div class="item-img img-cover">
     							<img src="assets/img/service/ft3.jpg" alt="">
     						</div>
@@ -591,7 +679,7 @@
     						<div class="subtitle text-uppercase d-flex  align-items-center">
     							<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     						</div>
-    						<h2 class="sec_title">
+    						<h2 class="sec_title ai-itm-title ai-itm-anim">
     							Agency Builds 
     							Custom AI Agents
     						</h2>
@@ -652,12 +740,12 @@
     					<div class="subtitle text-uppercase d-flex  align-items-center">
     						<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     					</div>
-    					<h2 class="sec_title">
+    					<h2 class="sec_title ai-itm-title ai-itm-anim">
     						Real Time Prediction
     						and <span> Pip install </span>
     					</h2>
     				</div>
-    				<div class="at-whc1-info1 position-relative mt-50 headline-1 pera-content">
+    				<div class="at-whc1-info1 txt_item_active position-relative mt-50 headline-1 pera-content">
     					<span>Time Travel Debugging</span>
     					<h2>Powering thousands of engineers 
     					building reliable agents</h2>
@@ -669,7 +757,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="at-whc1-item2">
+    			<div class="at-whc1-item2 txt_item_active">
     				<div class="item-text headline-2 pera-content">
     					<h3>80+</h3>
     					<p>Trace, Debug, & 
@@ -680,7 +768,7 @@
     					<img src="assets/img/about/wc2.jpg" alt="">
     				</div>
     			</div>
-    			<div class="at-whc1-item3 position-relaitve" data-background="assets/img/bg/wc1-bg.jpg">
+    			<div class="at-whc1-item3 txt_item_active position-relaitve" data-background="assets/img/bg/wc1-bg.jpg">
     				<div class="item-text headline-2 pera-content">
     					<h3>50+</h3>
     					<p>One SDK. Many 
@@ -714,11 +802,11 @@
 <!-- Start of Video section
     ============================================= -->
     <section id="at-vd1" class="at-vd1-sec over-hidden position-relative">
-    	<div class="at-vd1-bg img-cover position-absolute"><img src="assets/img/bg/vd-bg.jpg" alt=""></div>
+    	<div class="at-vd1-bg img-parallax img-cover position-absolute"><img src="assets/img/bg/vd-bg.jpg" alt=""></div>
     	<span class="at-vd1-circle position-absolute"></span>
     	<div class="container">
     		<div class="at-vd1-content position-relative d-flex align-items-end">
-    			<div class="at-vd1-img position-absolute">
+    			<div class="at-vd1-img  position-absolute">
     				<img src="assets/img/about/ab5.png" alt="">
     			</div>
     			<div class="at-vd1-item1 position-relative ul-li headline-1 pera-content">
@@ -775,7 +863,7 @@
     					<div class="subtitle text-uppercase d-flex  align-items-center">
     						<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     					</div>
-    					<h2 class="sec_title">
+    					<h2 class="sec_title ai-itm-title ai-itm-anim">
     						Join the largest bot 
     						Building community.
     					</h2>
@@ -958,7 +1046,7 @@
     					<div class="subtitle text-uppercase d-flex  align-items-center">
     						<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     					</div>
-    					<h2 class="sec_title">
+    					<h2 class="sec_title ai-itm-title ai-itm-anim">
     						Real Time Prediction
     						and <span> Pip install </span>
     					</h2>
@@ -988,7 +1076,7 @@
     					</div>
     					<div class="at-cont-rate-item d-flex align-items-center">
     						<div class="item-img img-cover">
-    							<img src="assets/img/about/cr1.jpg" alt="">
+    							<img src="assets/img/about/cr2.jpg" alt="">
     						</div>
     						<div class="item-text d-flex align-items-center">
     							<div class="inner-text headline-1">
@@ -1030,18 +1118,18 @@
 
 <!-- Start of trust section
     ============================================= -->
-    <section id="at-trust" class="at-trust-sec">
+    <section id="at-trust" class="at-trust-sec over-hidden">
     	<div class="at-sec-title3 text-center pt-20 mb-20  headline-1 pera-content">
     		<div class="subtitle text-center justify-content-center text-uppercase d-flex  align-items-center">
     			<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     		</div>
-    		<h2 class="sec_title">
+    		<h2 class="sec_title ai-itm-title ai-itm-anim">
     			Trusted by businesses
     			across the world.
     		</h2>
     	</div>
     	<div class="at-trust-content mt-50">
-    		<div class="at-trust-wrap1 d-flex">
+    		<div class="at-trust-wrap1 justify-content-center d-flex">
     			<div class="at-trust-item1">
     				<div class="item-img img-cover">
     					<img src="assets/img/gallery/gl18.jpg" alt="">
@@ -1074,10 +1162,10 @@
     				</div>
     			</div>
     		</div>
-    		<div class="at-trust-wrap1 d-flex">
+    		<div class="at-trust-wrap1 justify-content-center d-flex">
     			<div class="at-trust-item4">
     				<div class="item-img img-cover">
-    					<img src="assets/img/gallery/gl19.jpg" alt="">
+    					<img src="assets/img/gallery/gl21.jpg" alt="">
     				</div>
     			</div>
     			<div class="at-trust-item2 position-relative d-flex align-items-center justify-content-center">
@@ -1090,7 +1178,7 @@
     			</div>
     			<div class="at-trust-item3">
     				<div class="item-img img-cover">
-    					<img src="assets/img/gallery/gl20.jpg" alt="">
+    					<img src="assets/img/gallery/gl22.jpg" alt="">
     				</div>
     			</div>
     			<div class="at-trust-item2 position-relative d-flex align-items-center justify-content-center">
@@ -1103,7 +1191,7 @@
     			</div>
     			<div class="at-trust-item1">
     				<div class="item-img img-cover">
-    					<img src="assets/img/gallery/gl18.jpg" alt="">
+    					<img src="assets/img/gallery/gl23.jpg" alt="">
     				</div>
     			</div>
     		</div>
@@ -1121,7 +1209,7 @@
     			<div class="subtitle text-center justify-content-center text-uppercase d-flex  align-items-center">
     				<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     			</div>
-    			<h2 class="sec_title">
+    			<h2 class="sec_title ai-itm-title ai-itm-anim">
     				Personalised content & 
     				Recomendations
     			</h2>
@@ -1132,7 +1220,7 @@
     					<img src="assets/img/blog/blg7.jpg" alt="">
     				</div>
     				<div class="item-text headline-1">
-    					<h3 class="blg_title"><a href="#">Developer platform for building AI agents 
+    					<h3 class="blg_title href-underline"><a href="#">Developer platform for building AI agents 
     					and LLM apps.Agent observability </a></h3>
     				</div>
     			</div>
@@ -1142,7 +1230,7 @@
     						<img src="assets/img/blog/blg8.jpg" alt="">
     					</div>
     					<div class="item-text headline-1 pera-content">
-    						<h3 class="blg_title"><a href="#">Trace, Debug, & Deploy
+    						<h3 class="blg_title href-underline"><a href="#">Trace, Debug, & Deploy
     						Reliable AI Agents</a></h3>
     						<p>Get custom solutions for your business that help you leverage AI and Automation.</p>
     						<a class="read_more" href="#">
@@ -1160,7 +1248,7 @@
     						<img src="assets/img/blog/blg9.jpg" alt="">
     					</div>
     					<div class="item-text headline-1 pera-content">
-    						<h3 class="blg_title"><a href="#">Rewind Replay Agent Runs 
+    						<h3 class="blg_title href-underline"><a href="#">Rewind Replay Agent Runs 
     						With Point in time Precision.</a></h3>
     						<p>Get custom solutions for your business that help you leverage AI and Automation.</p>
     						<a class="read_more" href="#">
@@ -1199,7 +1287,7 @@
     			<div class="subtitle text-center  text-uppercase d-flex  align-items-center">
     				<i><img src="assets/img/icon/ic8.png" alt=""></i>Moving Forward With AI
     			</div>
-    			<h2 class="sec_title">
+    			<h2 class="sec_title ai-itm-title ai-itm-anim">
     				We are Recognized and 
     				Certified Partners
     			</h2>
@@ -1302,14 +1390,14 @@
     	<div class="at-ftr1-copyright">
     		<div class="container">
     			<div class="at-ftr1-copyright-wrap d-flex ul-li pera-content justify-content-between flex-wrap">
-    				<p>©Aicha 2025. All rights reserved.</p>
+    				<p>©Aitechfy 2025. All rights reserved.</p>
     				<ul>
     					<li><a href="#">Dribbble</a></li>
     					<li><a href="#">Facebook</a></li>
     					<li><a href="#">Behance</a></li>
     					<li><a href="#">Instagram</a></li>
     					<li><a href="#">LinkedIn</a></li>
-    					<li><a href="#">LinkedIn</a></li>
+    					<li><a href="#">Clutch</a></li>
     				</ul>
     			</div>
     		</div>

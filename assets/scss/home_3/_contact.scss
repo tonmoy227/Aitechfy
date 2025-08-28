@@ -148,7 +148,12 @@
 			text-align: center;
 			border-radius: 60px;
 			text-transform: uppercase;
-			background: var(--at-prime-c4);
+			background-size: 200%, 1px;
+			background-image: var(--at-prime-c4);
+			transition: all 800ms ease-in-out;
+			&:hover {
+				background-position: 240%;
+			}
 		}
 	}
 }

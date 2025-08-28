@@ -318,9 +318,14 @@
 		font-weight: 700;
 		text-align: center;
 		padding: 18px 15px;
-		background: var(--at-prime-c4);
+		background-size: 200%, 1px;
+		background-image: var(--at-prime-c4);
+		transition: all 500ms ease-in-out;
 		i {
 			margin-left: 8px;
+		}
+		&:hover {
+			background-position: 240%;
 		}
 	}
 }

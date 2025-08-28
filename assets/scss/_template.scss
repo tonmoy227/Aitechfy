@@ -24,7 +24,7 @@ Font load
 	--at-prime-c1: linear-gradient(90deg, var(--at-c1) 0%, var(--at-c2) 51.47%, var(--at-c3) 100%);
 	--at-prime-c2: linear-gradient(90deg, var(--at-c4) 0%, var(--at-c5) 100%);
 	--at-prime-c3: linear-gradient(90deg, var(--at-c6) 0%, var(--at-c7) 100%);
-	--at-prime-c4: linear-gradient( 90deg, var(--at-c8) 0%, var(--at-c9) 50%, var(--at-c10) 100%);
+	--at-prime-c4: linear-gradient(90deg, var(--at-c8) 0%, var(--at-c9) 50%, var(--at-c10));
 	--cube-1: cubic-bezier(0.55, 0.085, 0, 0.99);
 	--cube-2: all .25s cubic-bezier(.645,.045,.355,1);
 	--cube-3: cubic-bezier(0.25, 1, 0.5, 1);
@@ -68,6 +68,11 @@ Font load
 .slideInUp {
 	-webkit-animation-name: slideInUp;
 	animation-name: slideInUp;
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
 }
 // Responsive Variables
 $over:'(min-width: 1800px)';
